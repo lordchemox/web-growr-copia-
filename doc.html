@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Estructura básica */
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Estilo para el div izquierdo */
+    .left-div {
+      flex: 1;
+      padding: 20px;
+    }
+
+    /* Estilo para el div derecho */
+    .right-div {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Estilo para el contenedor de la imagen semiovalada */
+    .image-container {
+      width: 80%;
+      padding-top: 100%; /* Esto es para mantener una relación de aspecto cuadrada */
+      border-radius: 50% / 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Imagen responsiva dentro del contenedor */
+    .image-container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Hacer que el diseño sea responsivo */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .image-container {
+        width: 100%;
+      }
+    }
+  </style>
+  <title>Sección con Imagen Semiovalada</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="left-div">
+      <!-- Contenido para el div izquierdo -->
+      <h1>Texto del lado izquierdo</h1>
+      <p>Este es el contenido del div izquierdo.</p>
+    </div>
+    <div class="right-div">
+      <div class="image-container">
+        <img src="https://www.dzoom.org.es/wp-content/uploads/2010/09/mirada-ojos-encuadre-primer-plano-sexy-810x540.jpg" alt="Descripción de la imagen">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
